@@ -54,7 +54,11 @@ body{
 
 }
 .header {
-    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 
     &__block {
         width: 20%;
@@ -79,4 +83,63 @@ body{
 }
 .active {
     color: #fff;
+}
+
+// HEADER IS DONE__________________________
+
+.intro{
+    background: url('../img/intro_bg.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.intro::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.2;
+    content: '';
+}
+
+.intro__content{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.intro__block{
+    max-width: 790px;
+}
+
+.intro__title{
+    margin-bottom: 53px;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.btn{
+    min-width: 200px;
+    height: 50px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: #DB2512;
+}
+
+.btn:hover{
+    background-color: #5f140c;
+    transition: background-color .3s ease;
 }
